@@ -16,15 +16,15 @@ int makearray(int number[])
 
     int size = rand() % 11 + 10;
  
-    for (int i = 0, i < size; i++){
+    for (int i = 0; i < size; i++){
         number[i] = rand() % 100; 
     }
     return size;
 }
 void bubble(int number[], int last)
 {
-    for (int i = 0; i < N - 1; i++) {
-        if number[i] > number[i + 1] {
+    for (int i = 0; i < last - 1; i++) {
+        if (number[i] > number[i + 1]) {
             int temp = number[i];
             number[i] = number[i + 1];
             number[i + 1] = temp;
@@ -34,7 +34,7 @@ void bubble(int number[], int last)
 
 void printout(int number[], int last)
 {
-    for (int i = 0; i < N; i++){
+    for (int i = 0; i < last; i++){
         cout << number[i] << "\t";
     }
     cout << endl;
